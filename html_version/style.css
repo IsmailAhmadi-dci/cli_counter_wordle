@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yel1: #ffcf17;
+    --yel2: #faa52d;
+    --gray: #384649;
+    --wite: #dadada;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button, label, input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Header Section **************************************************** */
+
+header {
+    vertical-align: middle;
+    padding: 1rem;
+    margin: auto;
+    width: 80vw;
+}
+
+header img , h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header img {
+    width: 9rem;
+    margin: 1rem;
+}
+
+header h1 {
+    text-transform: capitalize;
+    color: var(--gray);
+    font-size: 3rem;
+}
+
+header p {
+    margin: 0.4rem 0;
+}
+
+.title {
+    font-weight: bold;
+}
+
+/* main **************************************************************** */
+
+main {
+    padding: 1rem 6rem;
+}
+
+.ms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-btn {
+    padding: 0.9rem 1.6rem;
+    background-color: var(--yel1);
+    border-radius: 1rem;
+    font-size: 2rem;
+    border: 0.2rem dashed black;
+}
+
+label {
+    display: block;
+}
+
+.radio {
+    border: 0.1rem dashed var(--gray);
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.4rem;
+    margin: 0.3rem;
+}
+
+.radio span {
+    opacity: 0;
+}
+
+.letter-holder {
+    margin: 0.3rem;
+    border: 0.1rem dashed var(--gray);
+    border-radius: 0.4rem;
+    text-align: center;
+    height: 4rem;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.letter-part {
+    width: 4rem;
+    margin: 0.2rem;
+}
+
+.letter-part input[type="radio"] {
+    display: none;
+}
+
+.b:checked + label {
+    background-color: #a34215;
+}
+
+.t:checked + label {
+    background-color: #26bd00;
+}
+
+
+#suggestion-area {
+    min-height: 9rem;
+    width: 100%;
+    background-color: var(--wite);
+    margin: 2rem 0;
+    border-radius: 1rem;
+    border: 0.3rem dashed var(--gray);
+    padding: 1rem;
+}
+
+.sug-btn {
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 0.2rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid var(--gray);
+}
+
+.sug-btn:nth-child(3n+1) {
+    background-color: yellow;
+}
+
+.sug-btn:nth-child(3n+2) {
+    background-color: var(--yel1);
+}
+
+.sug-btn:nth-child(3n+3) {
+    background-color: var(--yel2);
+}

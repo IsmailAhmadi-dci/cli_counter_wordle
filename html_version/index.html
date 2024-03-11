@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Ismail Ahmadi">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <title>Counter-Wordle</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <header>
+            <img src="favicon.png" alt="">
+            <h1>Counter-Wordle</h1>
+            <p>This application is designed to help you to beat the 5 letter wordle game.</p>
+            <hr>
+            <p style="color: gray;"><span class="title">Excluded Letters: </span><span class="info" id="info-excluded"></span></p>
+            <p style="color: maroon;"><span class="title">Included Letters: </span><span class="info" id="info-included"></span></p>
+            <p style="color: green;"><span class="title">Perfectly Matched: </span><span class="info" id="info-fixed"></span></p>
+        </header>
+
+
+        <main>
+            <!-- The Key main section -->
+            <section class="ms">
+                <div class="flex-center" style="margin: 1rem;">
+                    <button id="play-btn" onclick="play()">START</button>
+                </div>
+
+                <div class="flex-center">
+                    <!-- letter Board -->
+                    <div class="letter-part">
+                        <input type="radio" name="vl1" id="t-l1" class="t" value="perfect">
+                        <label for="t-l1" class="radio">
+                            <span>--------</span>
+                        </label>
+
+                        <input type="radio" name="vl1" id="m-l1" value="no">
+                        <label class="letter-holder" id="l1" for="m-l1"></label>
+
+                        <input type="radio" name="vl1" id="b-l1" class="b" value="included">
+                        <label for="b-l1" class="radio">
+                            <span>--------</span>
+                        </label>
+                    </div>
+
+
+
+
+
+
+                    <!-- 4 Times copy -->
+                    <div class="letter-part">
+                        <input type="radio" name="vl2" id="t-l2" class="t" value="perfect">
+                        <label for="t-l2" class="radio">
+                            <span>--------</span>
+                        </label>
+
+                        <input type="radio" name="vl2" id="m-l2" value="no">
+                        <label class="letter-holder" id="l2" for="m-l2"></label>
+
+                        <input type="radio" name="vl2" id="b-l2" class="b" value="included">
+                        <label for="b-l2" class="radio">
+                            <span>--------</span>
+                        </label>
+                    </div>
+
+
+                    <div class="letter-part">
+                        <input type="radio" name="vl3" id="t-l3" class="t" value="perfect">
+                        <label for="t-l3" class="radio">
+                            <span>--------</span>
+                        </label>
+
+                        <input type="radio" name="vl3" id="m-l3" value="no">
+                        <label class="letter-holder" id="l3" for="m-l3"></label>
+
+                        <input type="radio" name="vl3" id="b-l3" class="b" value="included">
+                        <label for="b-l3" class="radio">
+                            <span>--------</span>
+                        </label>
+                    </div>
+
+
+                    <div class="letter-part">
+                        <input type="radio" name="vl4" id="t-l4" class="t" value="perfect">
+                        <label for="t-l4" class="radio">
+                            <span>--------</span>
+                        </label>
+
+                        <input type="radio" name="vl4" id="m-l4" value="no">
+                        <label class="letter-holder" id="l4" for="m-l4"></label>
+
+                        <input type="radio" name="vl4" id="b-l4" class="b" value="included">
+                        <label for="b-l4" class="radio">
+                            <span>--------</span>
+                        </label>
+                    </div>
+
+
+                    <div class="letter-part">
+                        <input type="radio" name="vl5" id="t-l5" class="t" value="perfect">
+                        <label for="t-l5" class="radio">
+                            <span>--------</span>
+                        </label>
+
+                        <input type="radio" name="vl5" id="m-l5" value="no">
+                        <label class="letter-holder" id="l5" for="m-l5"></label>
+
+                        <input type="radio" name="vl5" id="b-l5" class="b" value="included">
+                        <label for="b-l5" class="radio">
+                            <span>--------</span>
+                        </label>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <!-- The suggestion areas -->
+            <section id="suggestion-area">
+
+            </section>
+        </main>
+        
+
+        <script src="fiveLetterDictionary.js"></script>
+        <script src="main.js" async defer></script>
+    </body>
+</html>
